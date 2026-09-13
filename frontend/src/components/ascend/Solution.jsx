@@ -88,7 +88,7 @@ export const Solution = () => (
           </div>
           <div className="absolute -bottom-4 left-6 rounded-full border border-[#2AFFF1]/40 bg-[#111214] px-4 py-1.5">
             <span className="font-mono-accent text-[10px] tracking-[0.2em] uppercase text-[#2AFFF1]">
-              IA treinada no seu negócio
+              IA treinada no site
             </span>
           </div>
         </div>
