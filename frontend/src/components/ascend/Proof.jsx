@@ -10,17 +10,15 @@ export const Proof = () => (
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
           <Reveal>
-            <p className="font-mono-accent text-6xl sm:text-7xl font-semibold text-[#2AFFF1] leading-none">
-              +2
-            </p>
-            <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight leading-tight">
-              anos desenvolvendo presença digital para negócios locais
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+              <span className="text-[#2AFFF1]">+2 Anos</span> elevando a presença digital
+              de empresas que buscam evoluir
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
             <div className="mt-8 rounded-2xl border-l-2 border-[#2AFFF1] bg-[#16181D] p-6 sm:p-8">
               <p className="font-mono-accent text-[10px] tracking-[0.25em] uppercase text-[#2AFFF1] mb-3">
-                Case real
+                Case
               </p>
               <h3 className="text-xl font-semibold text-[#FAFEFF]">Grip Fight Self Defense</h3>
               <p className="mt-3 text-sm sm:text-base text-[#A0A7B5] leading-relaxed">

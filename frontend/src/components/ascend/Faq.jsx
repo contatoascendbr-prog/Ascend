@@ -1,9 +1,4 @@
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion";
+import { ArrowUpRight } from "lucide-react";
 import { Reveal, Chapter } from "./Reveal";
 
 const FAQS = [
@@ -43,28 +38,27 @@ export const Faq = () => (
         </h2>
       </Reveal>
       <Reveal delay={0.15}>
-        <Accordion type="single" collapsible className="mt-12">
+        <div className="mt-12">
           {FAQS.map((f, i) => (
-            <AccordionItem
+            <button
               key={i}
-              value={`faq-${i}`}
-              className="border-b border-[#FAFEFF]/8"
+              data-testid={`faq-trigger-${i}`}
+              onClick={() =>
+                window.dispatchEvent(
+                  new CustomEvent("ascend:ask", { detail: { question: f.q } })
+                )
+              }
+              className="group flex w-full items-center justify-between gap-4 border-b border-[#FAFEFF]/8 py-5 text-left text-base sm:text-lg font-semibold text-[#FAFEFF] transition-colors duration-300 hover:text-[#2AFFF1]"
             >
-              <AccordionTrigger
-                data-testid={`faq-trigger-${i}`}
-                className="py-5 text-base sm:text-lg font-semibold text-[#FAFEFF] hover:text-[#2AFFF1] hover:no-underline transition-colors duration-300"
-              >
-                {f.q}
-              </AccordionTrigger>
-              <AccordionContent
-                data-testid={`faq-content-${i}`}
-                className="text-sm sm:text-base text-[#A0A7B5] leading-relaxed"
-              >
-                {f.a}
-              </AccordionContent>
-            </AccordionItem>
+              {f.q}
+              <ArrowUpRight className="h-5 w-5 shrink-0 text-[#646D7E] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#2AFFF1]" />
+            </button>
           ))}
-        </Accordion>
+          <p className="mt-6 text-xs sm:text-sm text-[#646D7E] leading-relaxed">
+            Clique em uma pergunta e o Assistente Ascend responde na hora, ali no canto
+            inferior direito.
+          </p>
+        </div>
       </Reveal>
     </div>
   </section>

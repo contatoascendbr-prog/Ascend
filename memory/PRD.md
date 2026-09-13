@@ -32,6 +32,13 @@ Landing page single-page para a Ascend Digital (Web Design & Automação com IA)
 - curl /api/, /api/leads, /api/chat (streaming OK, resposta correta sobre prazo)
 - Navegador: hero, chat (pergunta → resposta IA → handoff WhatsApp), oferta, formulário, mobile 390px
 
+## Iteração 13/09/2026 (edições visuais do usuário)
+- Hero centralizada
+- Labels de capítulo numerado (01–08) removidos globalmente
+- Prova social: "+2 Anos elevando a presença digital de empresas que buscam evoluir"; label "Case"
+- Objeções: título "Ainda tem dúvidas?"; garantia em dobra própria, agenda limitada abaixo, CTA WhatsApp movido da oferta para essa dobra
+- FAQ não é mais accordion: clicar na pergunta abre o Assistente Ascend e envia a pergunta pra ele responder ao vivo (evento ascend:ask)
+
 ## Backlog
 - P0: usuário preencher REACT_APP_META_PIXEL_ID e REACT_APP_GA4_ID no frontend/.env
 - P1: screenshot real do site da Grip Fight (hoje usa foto de treino + mockup de chat ilustrativo)

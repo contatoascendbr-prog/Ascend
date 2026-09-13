@@ -53,6 +53,19 @@ export const ChatWidget = () => {
   }, []);
 
   useEffect(() => {
+    const handler = (e) => {
+      const question = e.detail?.question;
+      openChat();
+      if (question) {
+        window.setTimeout(() => send(question), 100);
+      }
+    };
+    window.addEventListener("ascend:ask", handler);
+    return () => window.removeEventListener("ascend:ask", handler);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }

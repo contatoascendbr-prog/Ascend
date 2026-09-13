@@ -1,7 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
 import { Reveal, Chapter } from "./Reveal";
-import { WhatsAppCta } from "./CtaButton";
-import { WA_MESSAGES } from "@/lib/site";
 
 const STEPS = [
   "Você conversa com o time e conta seu objetivo",
@@ -82,17 +80,6 @@ export const Offer = () => (
         </Reveal>
       </div>
 
-      <Reveal delay={0.15}>
-        <div className="mt-12 flex justify-center">
-          <WhatsAppCta
-            message={WA_MESSAGES.offer}
-            source="site_oferta"
-            testId="offer-cta-whatsapp"
-          >
-            Quero Meu Site com IA
-          </WhatsAppCta>
-        </div>
-      </Reveal>
     </div>
   </section>
 );

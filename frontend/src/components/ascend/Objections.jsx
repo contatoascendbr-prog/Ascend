@@ -1,5 +1,7 @@
 import { ShieldCheck, CalendarClock } from "lucide-react";
 import { Reveal, Chapter } from "./Reveal";
+import { WhatsAppCta } from "./CtaButton";
+import { WA_MESSAGES } from "@/lib/site";
 
 const OBJECTIONS = [
   {
@@ -22,7 +24,7 @@ export const Objections = () => (
       <Chapter num="06" label="Sem risco" testId="chapter-objections" />
       <Reveal>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight max-w-3xl">
-          As dúvidas de sempre, <span className="text-[#2AFFF1]">sem rodeio.</span>
+          Ainda tem <span className="text-[#2AFFF1]">dúvidas?</span>
         </h2>
       </Reveal>
 
@@ -42,11 +44,11 @@ export const Objections = () => (
         ))}
       </div>
 
-      <div className="mt-10 grid md:grid-cols-2 gap-5">
+      <div className="mt-10 max-w-4xl space-y-5">
         <Reveal>
           <div
             data-testid="guarantee-card"
-            className="h-full rounded-2xl border border-[#2AFFF1]/25 bg-gradient-to-br from-[#2AFFF1]/8 to-transparent p-7 sm:p-9"
+            className="rounded-2xl border border-[#2AFFF1]/25 bg-gradient-to-br from-[#2AFFF1]/8 to-transparent p-7 sm:p-9"
           >
             <div className="flex items-center gap-3 mb-4">
               <ShieldCheck className="w-7 h-7 text-[#2AFFF1]" />
@@ -62,7 +64,7 @@ export const Objections = () => (
         <Reveal delay={0.1}>
           <div
             data-testid="urgency-card"
-            className="h-full rounded-2xl border border-[#4B0082]/50 bg-gradient-to-br from-[#4B0082]/30 to-transparent p-7 sm:p-9"
+            className="rounded-2xl border border-[#4B0082]/50 bg-gradient-to-br from-[#4B0082]/30 to-transparent p-7 sm:p-9"
           >
             <div className="flex items-center gap-3 mb-4">
               <CalendarClock className="w-7 h-7 text-[#2AFFF1]" />
@@ -76,6 +78,18 @@ export const Objections = () => (
           </div>
         </Reveal>
       </div>
+
+      <Reveal delay={0.15}>
+        <div className="mt-12 flex justify-center">
+          <WhatsAppCta
+            message={WA_MESSAGES.offer}
+            source="site_garantia"
+            testId="assurance-cta-whatsapp"
+          >
+            Quero Meu Site com IA
+          </WhatsAppCta>
+        </div>
+      </Reveal>
     </div>
   </section>
 );
