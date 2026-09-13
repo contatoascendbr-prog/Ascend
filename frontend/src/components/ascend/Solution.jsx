@@ -1,8 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import { Reveal, Chapter } from "./Reveal";
 
-const SOLUTION_IMG = "https://images.pexels.com/photos/3520679/pexels-photo-3520679.jpeg";
-
 const POINTS = [
   "Explica seus serviços no seu lugar",
   "Tira dúvida de preço e prazo na hora",
@@ -58,13 +56,35 @@ export const Solution = () => (
             <span className="w-2.5 h-2.5 rounded-full bg-[#FAFEFF]/15" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#2AFFF1]/60" />
           </div>
-          <div className="overflow-hidden rounded-xl">
-            <img
-              src={SOLUTION_IMG}
-              alt="Tecnologia por trás do Assistente Ascend"
-              loading="lazy"
-              className="w-full h-64 sm:h-80 object-cover opacity-90"
-            />
+          <div
+            data-testid="solution-chat-mockup"
+            className="rounded-xl bg-[#0d0e10] p-5 sm:p-7 min-h-64 sm:min-h-80 flex flex-col justify-center gap-3.5"
+          >
+            <div className="flex items-center gap-2 pb-1">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2AFFF1] opacity-60" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2AFFF1]" />
+              </span>
+              <span className="font-mono-accent text-[10px] tracking-[0.2em] uppercase text-[#A0A7B5]">
+                Assistente respondendo por você
+              </span>
+            </div>
+            <div className="flex justify-end">
+              <p className="max-w-[85%] rounded-2xl rounded-br-sm bg-[#2AFFF1] px-4 py-2.5 text-sm text-[#111214] font-medium">
+                Quais os horários disponíveis?
+              </p>
+            </div>
+            <div className="flex justify-start">
+              <p className="max-w-[85%] rounded-2xl rounded-bl-sm bg-[#23262e] px-4 py-2.5 text-sm text-[#FAFEFF] leading-relaxed">
+                Temos atendimento de segunda a sábado, das 8h às 20h. Se quiser, já te passo
+                os detalhes e a gente agenda pelo WhatsApp — topa?
+              </p>
+            </div>
+            <div className="flex items-center gap-1.5 pl-1 pt-1">
+              <span className="typing-dot w-1.5 h-1.5 rounded-full bg-[#2AFFF1]" />
+              <span className="typing-dot w-1.5 h-1.5 rounded-full bg-[#2AFFF1]" />
+              <span className="typing-dot w-1.5 h-1.5 rounded-full bg-[#2AFFF1]" />
+            </div>
           </div>
           <div className="absolute -bottom-4 left-6 rounded-full border border-[#2AFFF1]/40 bg-[#111214] px-4 py-1.5">
             <span className="font-mono-accent text-[10px] tracking-[0.2em] uppercase text-[#2AFFF1]">
