@@ -1,0 +1,139 @@
+{
+  "project_name": "Ascend Digital - Landing Page",
+  "app_type": "landing_page",
+  "theme": "dark",
+  "language": "pt-BR",
+  "brand_identity": {
+    "agency_name": "Ascend Digital",
+    "wordmark": "Ascend Digital",
+    "tagline": "Web Design & Automação IA",
+    "symbol": "Stylized 'A' with futuristic forward/upward arrow vector",
+    "positioning": "Agência elite de Web Design e Automação com Inteligência Artificial para converter visitantes em clientes qualificados via WhatsApp."
+  },
+  "colors": {
+    "background_primary": "#111214",
+    "background_secondary": "#16181D",
+    "background_card": "#1A1D24",
+    "text_primary": "#FAFEFF",
+    "text_secondary": "#A0A7B5",
+    "text_muted": "#646D7E",
+    "accent_cyan": "#2AFFF1",
+    "accent_cyan_glow": "rgba(42, 255, 241, 0.25)",
+    "accent_cyan_hover": "#00E5D4",
+    "accent_purple": "#4B0082",
+    "accent_purple_gradient": "linear-gradient(135deg, rgba(75, 0, 130, 0.5) 0%, rgba(17, 18, 20, 0.95) 100%)",
+    "accent_purple_border": "rgba(138, 43, 226, 0.3)",
+    "border_subtle": "rgba(250, 254, 255, 0.08)",
+    "border_cyan_highlight": "rgba(42, 255, 241, 0.4)",
+    "status_success": "#10B981"
+  },
+  "typography": {
+    "heading_font": "Outfit, sans-serif",
+    "body_font": "Plus Jakarta Sans, sans-serif",
+    "mono_font": "JetBrains Mono, monospace",
+    "scale": {
+      "hero_h1": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08]",
+      "section_h2": "text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight",
+      "h3": "text-xl sm:text-2xl font-semibold tracking-normal",
+      "card_title": "text-lg sm:text-xl font-semibold",
+      "body": "text-base sm:text-lg text-[#A0A7B5] leading-relaxed",
+      "caption": "text-xs sm:text-sm font-mono tracking-widest uppercase text-[#2AFFF1]"
+    }
+  },
+  "layout_and_grid": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "hero_layout": "Asymmetric kinetic layout with masked line-by-line headline reveal, live conversion ticker, interactive AI demo badge, and fast stats bar",
+    "bento_grid": "Tetris Grid system (grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8) combining 8-col hero features, 4-col key stat cards, and full-width interactive showcases",
+    "spacing_strategy": "Generous vertical rhythm (py-20 lg:py-32 between major sections) with internal container padding (p-6 lg:p-10) to prevent text clipping against solid #111214 walls"
+  },
+  "motion_and_effects": {
+    "library": "framer-motion",
+    "smooth_scrolling": "Lenis momentum scroll engine",
+    "hero_animation": "Masked line-by-line reveal animation on page mount + glow particle aura",
+    "marquee": "Slow kinetic editorial ribbon with low-contrast marquee drift for client tags and tech stack",
+    "micro_interactions": "Magnetic buttons with 1px animated cyan outer border glow, subtle card tilt on hover, glassmorphism backdrop blurs (backdrop-blur-xl bg-[#16181D]/80)",
+    "reduced_motion": "Respect prefers-reduced-motion via Framer Motion fallback states"
+  },
+  "key_features_and_sections": [
+    {
+      "section_id": "hero",
+      "title": "Hero Section - A Orquestra Digital de Alta Conversão",
+      "components": ["Kinetic headline mask", "Interactive AI Chat preview button", "Live status indicator (Engenharia Ativa)", "WhatsApp Primary CTA", "Social proof micro badge"]
+    },
+    {
+      "section_id": "pain-points",
+      "title": "Identificação da Dor - O Silêncio Que Custa Clientes",
+      "components": ["Interactive contrast slider (Site Tradicional vs Site Ascend com IA)", "Pain cards grid", "Loss calculator widget"]
+    },
+    {
+      "section_id": "solution-mechanism",
+      "title": "A Solução - O Protocolo Ascend com IA Integrada",
+      "components": ["3D interactive architecture diagram", "Live automated lead capture demo", "Feature highlights"]
+    },
+    {
+      "section_id": "bento-benefits",
+      "title": "Benefícios Extraordinários",
+      "components": ["Bento Grid Mode A", "24/7 AI Qualification module", "Zero Lead Drop architecture", "Instant WhatsApp Handoff visualization"]
+    },
+    {
+      "section_id": "social-proof-case",
+      "title": "Prova Social - Case de Sucesso: Grip Fight Self Defense",
+      "components": ["Interactive device mockup showcase", "Before vs After conversion metric (+340% leads)", "Client testimonial quote", "Direct WhatsApp demo preview"]
+    },
+    {
+      "section_id": "process-offer",
+      "title": "Processo & Oferta Especial",
+      "components": ["3-Step Ascension Roadmap", "Included deliverable checklist", "Transparency timeline"]
+    },
+    {
+      "section_id": "objections-guarantee-urgency",
+      "title": "Quebra de Objeções, Garantia & Urgência",
+      "components": ["7-Day Money-back Guarantee Card", "Scarcity counter badge (Apenas 3 vagas disponíveis este mês)", "Interactive ROI calculator"]
+    },
+    {
+      "section_id": "faq-accordion",
+      "title": "Perguntas Frequentes (FAQ)",
+      "components": ["Radix UI customized dark accordion with cyan markers", "Categorized questions regarding setup, AI training, and WhatsApp integration"]
+    },
+    {
+      "section_id": "final-cta",
+      "title": "Chamada Final para Ação (CTA)",
+      "components": ["High-contrast deep purple to cyan glow container", "Instant WhatsApp booking trigger", "LGPD compliance checkbox", "Direct contact options"]
+    },
+    {
+      "section_id": "ai-chat-widget",
+      "title": "Assistente de IA Ascend (Widget Fixo)",
+      "components": ["Fixed bottom-right position", "Typing animation indicator", "Pre-configured smart question chips", "Interactive service Q&A knowledge base", "Contextual WhatsApp handoff button when lead is qualified"]
+    },
+    {
+      "section_id": "footer",
+      "title": "Rodapé Oficial & LGPD",
+      "components": ["Wordmark & tagline", "Privacy Policy Modal trigger", "LGPD compliance statement", "WhatsApp direct shortcut"]
+    }
+  ],
+  "image_urls": {
+    "hero_tech_bg": "https://images.pexels.com/photos/16027815/pexels-photo-16027815.jpeg",
+    "circuit_pattern": "https://images.pexels.com/photos/3520679/pexels-photo-3520679.jpeg",
+    "case_study_grip_fight": "https://images.unsplash.com/photo-1656653121475-e33829581294?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxtYXJ0aWFsJTIwYXJ0cyUyMHNlbGYlMjBkZWZlbnNlJTIwdHJhaW5pbmd8ZW58MHx8fHwxNzg5MzEzNzc0fDA&ixlib=rb-4.1.0&q=85",
+    "grip_fight_action": "https://images.unsplash.com/photo-1555597408-26bc8e548a46?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwzfHxtYXJ0aWFsJTIwYXJ0cyUyMHNlbGYlMjBkZWZlbnNlJTIwdHJhaW5pbmd8ZW58MHx8fHwxNzg5MzEzNzc0fDA&ixlib=rb-4.1.0&q=85",
+    "grip_fight_dojo": "https://images.unsplash.com/photo-1598300606161-4019d0dfec28?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHw0fHxtYXJ0aWFsJTIwYXJ0cyUyMHNlbGYlMjBkZWZlbnNlJTIwdHJhaW5pbmd8ZW58MHx8fHwxNzg5MzEzNzc0fDA&ixlib=rb-4.1.0&q=85"
+  },
+  "whatsapp_integration": {
+    "phone_number": "5511999999999",
+    "default_messages": {
+      "hero_cta": "Olá! Gostaria de um orçamento para um site de alta conversão com IA para minha empresa.",
+      "case_cta": "Olá! Vi o case da Grip Fight e quero uma estrutura com IA semelhante para o meu negócio.",
+      "offer_cta": "Olá! Quero garantir uma das vagas disponíveis deste mês para o projeto com IA da Ascend Digital.",
+      "chat_escalation": "Olá! Conversei com a IA no site da Ascend Digital e gostaria de prosseguir com o atendimento humano."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Usar rigorosamente a paleta informada: Fundo #111214, Texto principal #FAFEFF, Cyan elétrico #2AFFF1 para CTAs e estados interativos, Roxo profundo #4B0082 para acentos de gradiente/bordas.",
+    "Utilizar Lucide-react para ícones tech refinados (Bot, Zap, MessageSquare, ShieldCheck, TrendingUp, Clock, CheckCircle2, ArrowRight, Sparkles).",
+    "Criar o widget de Chat de IA no canto inferior direito (fixed bottom-5 right-5 z-50) com balão expansível, animação de digitando (3 pontos pulsantes), respostas automáticas ricas sobre os serviços da Ascend e botão de transição para o WhatsApp.",
+    "Manter todos os CTAs de WhatsApp configurados para abrir em nova aba com links wa.me preenchidos com mensagens personalizadas por seção.",
+    "Adicionar data-testid em todos os botões, inputs, cards e elementos chave para testes automatizados.",
+    "Implementar modal de Política de Privacidade de acordo com a LGPD e checkbox de consentimento em formulários.",
+    "Garantir responsividade perfeita no mobile (360px+) com tipografia ajustada e espaçamentos fluidos."
+  ]
+}
