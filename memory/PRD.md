@@ -39,6 +39,10 @@ Landing page single-page para a Ascend Digital (Web Design & Automação com IA)
 - Objeções: título "Ainda tem dúvidas?"; garantia em dobra própria, agenda limitada abaixo, CTA WhatsApp movido da oferta para essa dobra
 - FAQ não é mais accordion: clicar na pergunta abre o Assistente Ascend e envia a pergunta pra ele responder ao vivo (evento ascend:ask)
 
+## Iteração 15/09/2026 (integração Google Sheets)
+- Formulário final agora envia POST JSON {nome, whatsapp} para o Google Apps Script do usuário
+- CORS: Apps Script não aceita preflight cross-origin; usado fetch com mode "no-cors" (padrão da indústria pra Apps Script). Sucesso é otimista (resposta opaca); erro de rede ainda mostra mensagem e permite retry. Cópia de backup segue salva em /api/leads (MongoDB)
+
 ## Backlog
 - P0: usuário preencher REACT_APP_META_PIXEL_ID e REACT_APP_GA4_ID no frontend/.env
 - P1: screenshot real do site da Grip Fight (hoje usa foto de treino + mockup de chat ilustrativo)

@@ -5,6 +5,8 @@ import { Reveal, Chapter } from "./Reveal";
 import { trackLead, waLink } from "@/lib/site";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const SHEETS_ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbwiopMU959ILfWinR2ct2cnZmGAhmlWZiXkVqS14g2GJIlymGkRCD8AN5RRffNnS5D8FQ/exec";
 
 export const FinalCta = () => {
   const [name, setName] = useState("");
@@ -24,13 +26,19 @@ export const FinalCta = () => {
     }
     setSending(true);
     try {
-      await fetch(`${API}/leads`, {
+      await fetch(SHEETS_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nome: name.trim(), whatsapp: phone.trim() }),
+      });
+      fetch(`${API}/leads`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: name.trim(), whatsapp: phone.trim(), consent }),
-      });
+      }).catch(() => {});
       trackLead("site_form_final");
-      toast.success("Recebido! Abrindo seu WhatsApp...");
+      toast.success("Enviado com sucesso! Abrindo seu WhatsApp...");
       window.open(
         waLink(
           `Olá! Sou ${name.trim()} e quero receber a proposta do site com IA da Ascend.`,
@@ -43,7 +51,7 @@ export const FinalCta = () => {
       setPhone("");
       setConsent(false);
     } catch {
-      toast.error("Não consegui enviar agora. Tenta de novo ou chama direto no WhatsApp.");
+      toast.error("Não foi possível enviar. Verifique sua conexão e tente novamente.");
     } finally {
       setSending(false);
     }
