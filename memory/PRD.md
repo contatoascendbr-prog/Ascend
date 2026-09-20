@@ -43,6 +43,9 @@ Landing page single-page para a Ascend Digital (Web Design & Automação com IA)
 - Formulário final agora envia POST JSON {nome, whatsapp} para o Google Apps Script do usuário
 - CORS: Apps Script não aceita preflight cross-origin; usado fetch com mode "no-cors" (padrão da indústria pra Apps Script). Sucesso é otimista (resposta opaca); erro de rede ainda mostra mensagem e permite retry. Cópia de backup segue salva em /api/leads (MongoDB)
 
+## Iteração 20/09/2026 (fix chat)
+- Bug reportado: "IA não está funcionando bem". Backend e multi-turn OK; defeito real: link wa.me nas respostas da IA aparecia como texto morto. Fix: URLs nas mensagens viram links clicáveis ("Falar no WhatsApp"), com trackLead. Verificado no navegador (link clicável com href correto).
+
 ## Backlog
 - P0: usuário preencher REACT_APP_META_PIXEL_ID e REACT_APP_GA4_ID no frontend/.env
 - P1: screenshot real do site da Grip Fight (hoje usa foto de treino + mockup de chat ilustrativo)

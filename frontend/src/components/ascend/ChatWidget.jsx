@@ -18,6 +18,26 @@ const TypingDots = () => (
   </div>
 );
 
+const linkify = (text, isUser) =>
+  text.split(/(https?:\/\/[^\s]+)/g).map((part, i) =>
+    /^https?:\/\//.test(part) ? (
+      <a
+        key={i}
+        href={part}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => trackLead("site_chat_link")}
+        className={`font-semibold underline underline-offset-2 ${
+          isUser ? "text-[#111214]" : "text-[#2AFFF1] hover:text-[#00E5D4]"
+        }`}
+      >
+        {part.includes("wa.me") ? "Falar no WhatsApp" : part}
+      </a>
+    ) : (
+      part
+    )
+  );
+
 export const ChatWidget = () => {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([]);
@@ -209,7 +229,7 @@ export const ChatWidget = () => {
                         : "rounded-bl-sm bg-[#23262e] text-[#FAFEFF]"
                     }`}
                   >
-                    {m.content}
+                    {linkify(m.content, m.role === "user")}
                   </div>
                 </div>
               ))}
