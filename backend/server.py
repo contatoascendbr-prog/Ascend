@@ -102,8 +102,7 @@ async def chat(req: ChatRequest):
             if not full:
                 full = "Tive uma instabilidade aqui do meu lado. Me chama no WhatsApp que a gente resolve na hora: https://wa.me/555193319115?utm_source=site_chat"
                 yield f"data: {json.dumps({'delta': full})}\n\n"
-
-            })
+                
         yield "data: [DONE]\n\n"
 
     return StreamingResponse(
