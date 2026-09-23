@@ -88,8 +88,6 @@ async def chat(req: ChatRequest):
         ).with_model("openai", "gpt-5.4")
     session = chat_sessions[req.session_id]
 
-    })
-
     async def event_stream():
         full = ""
         try:
