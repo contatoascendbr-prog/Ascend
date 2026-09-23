@@ -88,11 +88,6 @@ async def chat(req: ChatRequest):
         ).with_model("openai", "gpt-5.4")
     session = chat_sessions[req.session_id]
 
-    await db.chat_messages.insert_one({
-        "session_id": req.session_id,
-        "role": "user",
-        "content": message,
-        "created_at": datetime.now(timezone.utc).isoformat(),
     })
 
     async def event_stream():
@@ -109,12 +104,7 @@ async def chat(req: ChatRequest):
             if not full:
                 full = "Tive uma instabilidade aqui do meu lado. Me chama no WhatsApp que a gente resolve na hora: https://wa.me/555193319115?utm_source=site_chat"
                 yield f"data: {json.dumps({'delta': full})}\n\n"
-        if full:
-            await db.chat_messages.insert_one({
-                "session_id": req.session_id,
-                "role": "assistant",
-                "content": full,
-                "created_at": datetime.now(timezone.utc).isoformat(),
+
             })
         yield "data: [DONE]\n\n"
 
