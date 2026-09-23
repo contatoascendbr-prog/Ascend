@@ -2,7 +2,6 @@ from fastapi import FastAPI, APIRouter
 from fastapi.responses import StreamingResponse
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
-from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import json
 import uuid
@@ -15,10 +14,6 @@ from emergentintegrations.llm.chat import LlmChat, UserMessage, TextDelta, Strea
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
-
-mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
 
 app = FastAPI()
 api_router = APIRouter(prefix="/api")
@@ -76,8 +71,6 @@ async def create_lead(lead: LeadCreate):
         "consent": lead.consent,
         "created_at": datetime.now(timezone.utc).isoformat(),
     }
-    await db.leads.insert_one(doc)
-    doc.pop("_id", None)
     return {"ok": True, "lead": doc}
 
 
@@ -148,6 +141,3 @@ logging.basicConfig(
 )
 
 
-@app.on_event("shutdown")
-async def shutdown_db_client():
-    client.close()
